@@ -17,7 +17,7 @@ import react from "../assets/react.png";
 import tailwindcss from "../assets/tailwindcss.png";
 import git from "../assets/git.png";
 import textutil from "../assets/textutil.png";
-import newsmonkey from "../assets/newsmonkey.png";
+import newsmonkey from "../assets/newsMonkey.png";
 import inotebook from "../assets/inotebook.png";
 import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
