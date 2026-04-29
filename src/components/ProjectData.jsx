@@ -2,6 +2,7 @@ import textutilImg from "../assets/textutil.png";
 import newsmonkeyImg from "../assets/newsMonkey.png";
 import inotebookImg from "../assets/inotebook.png";
 import pokedexImg from "../assets/pokedex.png";
+import portfolioImg from "../assets/portfolio.png";
 
 export const projectData = [
   {
@@ -29,7 +30,7 @@ export const projectData = [
     techStack: ["React", "API"],
     features: ["Live news", "Categories", "Infinite scrolling"],
     github: "https://github.com/PrachiShree-SDE/newsmonkey-react",
-    live: "https://newsmonkey.vercel.app",
+    live: "https://newsmonkey-react-7xny.vercel.app/",
   },
 
   {
@@ -57,6 +58,21 @@ export const projectData = [
       "Clean responsive UI",
     ],
     github: "https://github.com/PrachiShree-SDE/PokeDex",
-    live: "https://pokedex.vercel.app",
+    live: "https://poke-dex-zeta-nine.vercel.app/",
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio",
+    image: portfolioImg, // Make sure to import a screenshot of your home page
+    description:
+      "A high-end, minimalist portfolio designed with a 'Sober & Stylish' aesthetic. It features a fully responsive design, dynamic project routing, dark mode integration, and a glassmorphic UI architecture to showcase my engineering journey.",
+    techStack: ["React", "Tailwind", "Framer Motion"],
+    features: [
+      "Dynamic Routing & Case Studies",
+      "Custom Dark/Light Mode logic",
+      "EmailJS Integration",
+    ],
+    github: "https://github.com/PrachiShree-SDE/portfolio",
+    live: "https://portfolio-delta-swart-cob3vkl37r.vercel.app/",
   },
 ];
