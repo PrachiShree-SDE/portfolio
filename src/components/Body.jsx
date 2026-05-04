@@ -24,6 +24,8 @@ import pokedex from "../assets/pokedex.png";
 import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
 import Footer from "./Footer";
+import ProjectCarousel from "./ProjectCarousel.jsx";
+
 
 const Body = () => {
   const form = useRef();
@@ -158,33 +160,7 @@ const Body = () => {
       </section>
 
       {/* PROJECTS SECTION - Exact Colors: Blue-50 / Slate-800 */}
-      <section className="bg-blue-50 dark:bg-slate-800 py-24 px-6">
-        <h1 className="text-center font-bold text-4xl text-blue-900 dark:text-blue-300 mb-16">
-          My Projects
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {[
-            { img: textutil, link: "/projects/textutils", name: "TextUtils" },
-            { img: newsmonkey, link: "/projects/newsmonkey", name: "NewsMonkey" },
-            { img: inotebook, link: "/projects/inotebook", name: "iNotebook" },
-            { img: pokedex, link: "/projects/pokedex", name: "PokeDex" }
-          ].map((proj, i) => (
-            <div key={i} className="flex flex-col bg-white dark:bg-slate-700 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-blue-100 dark:border-slate-600">
-              <div className="h-52 overflow-hidden bg-white flex items-center justify-center p-6">
-                <img src={proj.img} className="max-h-full w-auto object-contain group-hover:scale-110 transition-transform duration-700" alt="project" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold dark:text-white mb-4 text-center">{proj.name}</h3>
-                <Link to={proj.link}>
-                  <button className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all active:scale-95 shadow-md">
-                    View Project →
-                  </button>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+     <ProjectCarousel />
 
       {/* CONTACT SECTION - Exact Colors: Blue-100 / Slate-900 */}
       <section className="bg-blue-100 dark:bg-slate-900 px-6 py-24">
@@ -226,3 +202,151 @@ const Body = () => {
 };
 
 export default Body;
+
+
+
+
+
+
+// import { useRef } from "react";
+// import { Link } from "react-router-dom";
+// import emailjs from "@emailjs/browser";
+
+// import image from "../assets/image.png";
+// import github from "../assets/github.svg";
+// import linkedin from "../assets/linkedin.svg";
+// import twitter from "../assets/twitter.svg";
+// import about from "../assets/about.png";
+// import exp from "../assets/exp.svg";
+// import location from "../assets/location.svg";
+// import html from "../assets/html.png";
+// import css from "../assets/css.png";
+// import javascript from "../assets/javascript.png";
+// import react from "../assets/react.png";
+// import tailwindcss from "../assets/tailwindcss.png";
+// import git from "../assets/git.png";
+// import email from "../assets/email.svg";
+// import phone from "../assets/phone.svg";
+
+// import Footer from "./Footer";
+
+// /* ✅ CORRECT IMPORT */
+// import ProjectCarousel from "./ProjectCarousel";
+
+// const Body = () => {
+//   const form = useRef();
+
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .sendForm(
+//         "service_l6dmxmi",
+//         "template_811h7hi",
+//         form.current,
+//         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+//       )
+//       .then(() => {
+//         alert("Message sent successfully 🚀");
+//         form.current.reset();
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//         alert("Failed to send message ❌");
+//       });
+//   };
+
+//   return (
+//     <div className="w-full overflow-x-hidden">
+
+//       {/* HERO */}
+//       <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-16 bg-blue-100 dark:bg-slate-900">
+//         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
+//           <h1 className="text-5xl font-bold text-blue-900 dark:text-white">
+//             Prachi Shree
+//           </h1>
+//           <h2 className="text-3xl text-blue-600 dark:text-blue-300">
+//             Frontend Developer
+//           </h2>
+
+//           <div className="flex gap-4 justify-center md:justify-start">
+//             <Link to="/contact">
+//               <button className="px-6 py-3 bg-blue-600 text-white rounded-xl">
+//                 Hire Me
+//               </button>
+//             </Link>
+
+//             <Link to="/project">
+//               <button className="px-6 py-3 border rounded-xl">
+//                 View Projects
+//               </button>
+//             </Link>
+//           </div>
+//         </div>
+
+//         <img src={image} className="w-72 rounded-full shadow-xl" />
+//       </section>
+
+//       {/* ABOUT */}
+//       <section className="bg-blue-50 dark:bg-slate-800 px-6 py-24">
+//         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-center">
+//           <img src={about} className="w-80 rounded-2xl" />
+
+//           <div>
+//             <h2 className="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-4">
+//               About Me
+//             </h2>
+//             <p className="text-gray-700 dark:text-gray-300 text-lg">
+//               I am a React Frontend Developer who loves building modern UI.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* SKILLS */}
+//       <section className="bg-blue-100 dark:bg-slate-900 py-20">
+//         <h2 className="text-center text-4xl font-bold mb-10 text-blue-900 dark:text-blue-300">
+//           Skills
+//         </h2>
+
+//         <div className="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-5xl mx-auto">
+//           {[html, css, javascript, react, tailwindcss, git].map((img, i) => (
+//             <img key={i} src={img} className="w-16 mx-auto" />
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* ✅ PROJECT CAROUSEL */}
+//       <ProjectCarousel />
+
+//       {/* CONTACT */}
+//       <section className="bg-blue-100 dark:bg-slate-900 px-6 py-24">
+//         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+
+//           <div>
+//             <h2 className="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-4">
+//               Contact Me
+//             </h2>
+//             <p className="text-gray-700 dark:text-gray-300">
+//               Let’s build something amazing 🚀
+//             </p>
+//           </div>
+
+//           <form ref={form} onSubmit={sendEmail} className="bg-white dark:bg-slate-800 p-6 rounded-xl space-y-4">
+//             <input name="user_name" placeholder="Name" className="w-full p-3 rounded" />
+//             <input name="user_email" placeholder="Email" className="w-full p-3 rounded" />
+//             <textarea name="message" placeholder="Message" className="w-full p-3 rounded"></textarea>
+
+//             <button className="w-full bg-blue-600 text-white py-3 rounded-xl">
+//               Send
+//             </button>
+//           </form>
+//         </div>
+//       </section>
+
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Body;

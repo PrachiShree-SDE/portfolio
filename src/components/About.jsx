@@ -53,7 +53,7 @@ const About = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://drive.google.com/file/d/1YrG33baDek4BmhmMSu0Twe2Pw3sxHw5p/view?usp=sharing"
+                href="https://drive.google.com/file/d/15RWfW8s3XWxqYWkoYXiMNoCw3j1gstmA/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all active:scale-95"

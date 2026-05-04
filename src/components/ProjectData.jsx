@@ -3,8 +3,31 @@ import newsmonkeyImg from "../assets/newsMonkey.png";
 import inotebookImg from "../assets/inotebook.png";
 import pokedexImg from "../assets/pokedex.png";
 import portfolioImg from "../assets/portfolio.png";
+import foodvillaImg from "../assets/foodvilla.png";
 
 export const projectData = [
+  {
+    id: "foodvilla",
+    title: "FoodVilla",
+    image: foodvillaImg, // make sure to import the image at the top
+    description:
+      "A production-ready Swiggy-like food ordering platform built with React, featuring live restaurant data, dynamic routing, optimized performance, reusable components, and a clean responsive UI following best practices.",
+
+    techStack: ["React", "Redux Toolkit", "Tailwind Css", "Swiggy API"],
+
+    features: [
+      "Live restaurant & menu data using Swiggy API",
+      "Advanced cart management with Redux Toolkit",
+      "Shimmer UI for skeleton loading",
+      "Search, filter, sorting & category-based browsing",
+      "Reusable components with clean architecture",
+      "Fully responsive modern user interface",
+    ],
+
+    github: "https://github.com/PrachiShree-SDE/foodvilla",
+    // live: "", // add when deployed to Vercel
+  },
+
   {
     id: "textutils",
     title: "TextUtils",
@@ -42,9 +65,9 @@ export const projectData = [
     techStack: ["MongoDB", "Express", "React", "Node"],
     features: ["User auth", "Cloud notes", "Secure API"],
     github: "https://github.com/PrachiShree-SDE/inotebook",
-    live: "https://inotebook.vercel.app",
+    // live: "https://inotebook.vercel.app",
   },
-
+  
   {
     id: "pokedex",
     title: "PokeDex",

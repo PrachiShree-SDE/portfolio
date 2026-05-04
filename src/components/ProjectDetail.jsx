@@ -33,17 +33,15 @@ const ProjectDetail = () => {
       {/* 2. MAIN CASE STUDY CONTAINER */}
       <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
         
-        {/* HERO IMAGE SECTION (FIXED: Added object-top and reduced hover scale) */}
+        {/* HERO IMAGE SECTION */}
         <div className="relative group overflow-hidden h-[350px] bg-slate-100 dark:bg-slate-800">
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-[1.02]"
           />
-          {/* Subtle bottom gradient for contrast */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          
-          {/* Smaller, clean title overlay */}
+
           <div className="absolute bottom-6 left-6 px-5 py-3 rounded-full bg-slate-900/60 backdrop-blur-sm border border-slate-700">
             <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight">
               {project.title}
@@ -65,7 +63,7 @@ const ProjectDetail = () => {
 
           {/* TECH STACK SECTION */}
           <div className="mb-12">
-             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 mb-6">
+            <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 mb-6">
               Technologies Used
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -102,15 +100,20 @@ const ProjectDetail = () => {
 
           {/* CALL TO ACTION BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-slate-100 dark:border-slate-800">
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noreferrer"
-              className="flex-1 flex items-center justify-center gap-3 px-8 py-5 rounded-2xl font-black text-sm uppercase tracking-widest bg-blue-600 text-white shadow-xl shadow-blue-500/20 hover:bg-blue-700 hover:-translate-y-1 transition-all"
-            >
-              <FaExternalLinkAlt /> Launch Live Demo
-            </a>
 
+            {/* SHOW LIVE DEMO ONLY IF project.live EXISTS */}
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 flex items-center justify-center gap-3 px-8 py-5 rounded-2xl font-black text-sm uppercase tracking-widest bg-blue-600 text-white shadow-xl shadow-blue-500/20 hover:bg-blue-700 hover:-translate-y-1 transition-all"
+              >
+                <FaExternalLinkAlt /> Launch Live Demo
+              </a>
+            )}
+
+            {/* GITHUB BUTTON ALWAYS VISIBLE */}
             <a
               href={project.github}
               target="_blank"
