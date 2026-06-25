@@ -126,51 +126,69 @@ const Skills = () => {
       </div>
 
       {/* LEARNING SECTION */}
-      {/* LEARNING SECTION */}
-      <div className="max-w-6xl mx-auto mt-20 text-center">
-        <h2 className="text-2xl font-bold mb-6 text-blue-600">
-          Currently Learning
-        </h2>
+      <div className="max-w-6xl mx-auto mt-24 px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-600">
+            Currently Learning 🚀
+          </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 text-4xl">
-          {/* AI / AGENTIC AI */}
-          <div className="flex flex-col items-center">
-            <FaBrain className="text-purple-500" />
-            <span className="text-xs mt-1">Agentic AI</span>
+          <p className="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+            Continuously expanding my skill set by exploring modern web
+            technologies, AI-powered workflows, and scalable application
+            architectures.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {/* Agentic AI */}
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+            <FaBrain className="text-5xl text-purple-500 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg">Agentic AI</h3>
+            <p className="text-sm text-slate-500 mt-2">
+              Building intelligent workflows with LLMs, tools, and autonomous
+              agents.
+            </p>
           </div>
 
-          {/* TYPESCRIPT */}
-          <div className="flex flex-col items-center">
-            <span className="text-blue-600 font-bold text-2xl">TS</span>
-            <span className="text-xs mt-1">TypeScript</span>
+          {/* TypeScript */}
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+            <div className="text-5xl font-bold text-blue-600 mb-4">TS</div>
+            <h3 className="font-semibold text-lg">TypeScript</h3>
+            <p className="text-sm text-slate-500 mt-2">
+              Writing scalable and type-safe applications for better
+              maintainability.
+            </p>
           </div>
 
-          {/* NEXT.JS */}
-          <div className="flex flex-col items-center">
-            <span className="text-black dark:text-white font-bold text-2xl">
-              N
-            </span>
-            <span className="text-xs mt-1">Next.js</span>
+          {/* Next.js */}
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+            <div className="text-5xl font-bold dark:text-white mb-4">N</div>
+            <h3 className="font-semibold text-lg">Next.js</h3>
+            <p className="text-sm text-slate-500 mt-2">
+              Learning SSR, SSG, API routes, and full-stack React development.
+            </p>
           </div>
 
           {/* PHP */}
-          <div className="flex flex-col items-center">
-            <span className="text-purple-700 font-bold text-2xl">PHP</span>
-            <span className="text-xs mt-1">PHP</span>
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+            <div className="text-5xl font-bold text-purple-600 mb-4">PHP</div>
+            <h3 className="font-semibold text-lg">PHP</h3>
+            <p className="text-sm text-slate-500 mt-2">
+              Exploring backend development concepts and server-side
+              architecture.
+            </p>
           </div>
 
-          {/* ROCKET ICON */}
-          <div className="flex flex-col items-center">
-            <FaRocket className="text-blue-500" />
-            <span className="text-xs mt-1">Scaling Systems</span>
+          {/* Scaling Systems */}
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+            <FaRocket className="text-5xl text-blue-500 mx-auto mb-4" />
+            <h3 className="font-semibold text-lg">System Design</h3>
+            <p className="text-sm text-slate-500 mt-2">
+              Understanding scalable architectures, performance optimization,
+              and deployment.
+            </p>
           </div>
         </div>
-
-        <p className="mt-6 text-slate-500 dark:text-slate-400">
-          Expanding into modern full-stack ecosystems including Next.js SSR
-          apps, TypeScript safety, backend PHP systems, and Agentic AI workflows
-          using LLM-powered automation.
-        </p>
       </div>
     </div>
   );

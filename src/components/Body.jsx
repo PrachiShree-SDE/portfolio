@@ -24,6 +24,22 @@ import phone from "../assets/phone.svg";
 import Footer from "./Footer";
 import ProjectCarousel from "./ProjectCarousel.jsx";
 
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+
+import {
+  SiTailwindcss,
+  SiRedux,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 
 const Body = () => {
   const form = useRef();
@@ -166,29 +182,69 @@ const Body = () => {
         </div>
       </section>
 
-      {/* SKILLS SECTION - Exact Colors: Blue-100 / Slate-900 */}
-      <section className="py-24 px-6 bg-blue-100 dark:bg-slate-900">
+      {/* SKILLS SECTION */}
+      <section className="pt-20 px-6 bg-blue-100 dark:bg-slate-900">
         <h1 className="text-center font-bold text-4xl text-blue-900 dark:text-blue-300 underline decoration-blue-500 underline-offset-[12px] mb-16">
           My Skills
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+
+       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-7xl mx-auto pb-6">
           {[
-            { img: html, name: "HTML" },
-            { img: css, name: "CSS" },
-            { img: javascript, name: "JavaScript" },
-            { img: react, name: "React" },
-            { img: tailwindcss, name: "Tailwind CSS" },
-            { img: git, name: "Git" },
+            {
+              icon: <FaHtml5 className="text-orange-500 text-4xl" />,
+              name: "HTML",
+            },
+            {
+              icon: <FaCss3Alt className="text-blue-500 text-4xl" />,
+              name: "CSS",
+            },
+            {
+              icon: <FaJs className="text-yellow-500 text-4xl" />,
+              name: "JavaScript",
+            },
+            {
+              icon: <FaReact className="text-cyan-500 text-4xl" />,
+              name: "React",
+            },
+            {
+              icon: <SiRedux className="text-purple-500 text-4xl" />,
+              name: "Redux Toolkit",
+            },
+            {
+              icon: <SiTailwindcss className="text-sky-500 text-4xl" />,
+              name: "Tailwind CSS",
+            },
+            {
+              icon: <SiNodedotjs className="text-green-600 text-4xl" />,
+              name: "Node.js",
+            },
+            {
+              icon: (
+                <SiExpress className="text-gray-800 dark:text-white text-4xl" />
+              ),
+              name: "Express.js",
+            },
+            {
+              icon: <SiMongodb className="text-green-500 text-4xl" />,
+              name: "MongoDB",
+            },
+            {
+              icon: <FaGitAlt className="text-orange-600 text-4xl" />,
+              name: "Git",
+            },
+            {
+              icon: (
+                <FaGithub className="text-black dark:text-white text-4xl" />
+              ),
+              name: "GitHub",
+            },
           ].map((skill, i) => (
             <div key={i} className="flex flex-col items-center group">
               <div className="bg-white dark:bg-slate-800 p-7 rounded-[2rem] shadow-md group-hover:shadow-blue-300 dark:group-hover:shadow-blue-900 group-hover:-translate-y-3 transition-all duration-300">
-                <img
-                  src={skill.img}
-                  className="h-16 w-16 object-contain"
-                  alt={skill.name}
-                />
+                {skill.icon}
               </div>
-              <p className="mt-4 font-bold text-slate-700 dark:text-white uppercase text-xs tracking-widest">
+
+              <p className="mt-4 font-bold text-slate-700 dark:text-white uppercase text-xs tracking-widest text-center">
                 {skill.name}
               </p>
             </div>

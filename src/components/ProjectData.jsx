@@ -4,12 +4,13 @@ import inotebookImg from "../assets/inotebook.png";
 import pokedexImg from "../assets/pokedex.png";
 import portfolioImg from "../assets/portfolio.png";
 import foodvillaImg from "../assets/foodvilla.png";
+import devTinderImg from "../assets/devTinder.png";
 
 export const projectData = [
   {
     id: "foodvilla",
     title: "FoodVilla",
-    image: foodvillaImg, // make sure to import the image at the top
+    image: foodvillaImg, 
     description:
       "A production-ready Swiggy-like food ordering platform built with React, featuring live restaurant data, dynamic routing, optimized performance, reusable components, and a clean responsive UI following best practices.",
 
@@ -27,6 +28,41 @@ export const projectData = [
     github: "https://github.com/PrachiShree-SDE/foodvilla",
     // live: "", // add when deployed to Vercel
   },
+
+
+  {
+  id: "devtinder",
+  title: "DevTinder",
+  image: devTinderImg, 
+
+  description:
+    "A full-stack developer networking platform inspired by Tinder, built using the MERN stack. Users can create profiles, send connection requests, manage matches, and interact through a secure authentication system with a modern responsive UI.",
+
+  techStack: [
+    "React",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Tailwind CSS",
+    "DaisyUI"
+  ],
+
+  features: [
+    "Secure user authentication using JWT & cookies",
+    "Create and manage developer profiles",
+    "Send, accept, reject, and review connection requests",
+    "Personalized developer feed with smart filtering",
+    "Redux Toolkit for global state management",
+    "Protected routes and authorization middleware",
+    "Responsive UI optimized for all devices",
+    "RESTful API integration with MongoDB database"
+  ],
+
+  github: "https://github.com/PrachiShree-SDE/devTinder",
+  // live: "", // add deployed link when available
+},
 
   {
     id: "textutils",
@@ -86,7 +122,7 @@ export const projectData = [
   {
     id: "portfolio",
     title: "Portfolio",
-    image: portfolioImg, // Make sure to import a screenshot of your home page
+    image: portfolioImg, 
     description:
       "A high-end, minimalist portfolio designed with a 'Sober & Stylish' aesthetic. It features a fully responsive design, dynamic project routing, dark mode integration, and a glassmorphic UI architecture to showcase my engineering journey.",
     techStack: ["React", "Tailwind", "Framer Motion"],
